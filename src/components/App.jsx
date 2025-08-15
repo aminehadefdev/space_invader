@@ -6,9 +6,11 @@ import useMoveWrapper from "../hooks/WraperShips/useMoveWrapper"
 
 import "./App.css"
 import WraperShips from './WraperShips/WraperShips'
+import useDataShip from '../hooks/Ship/useDataShip'
 
 function App() {
   const store = useSelector(state => state.App)
+  useDataShip()
   useEventsKey()
   useDirection()
   useMoveWrapper()

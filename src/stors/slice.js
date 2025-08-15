@@ -23,9 +23,10 @@ const reducers = {
     moveWrapperShipRight: WraperShips.reducers.moveWrapperShipRight,
     moveWrapperShipLeft: WraperShips.reducers.moveWrapperShipLeft,
     moveWrapperShipBottom: WraperShips.reducers.moveWrapperShipBottom,
-    setWrapperShipDirection: WraperShips.reducers.setWrapperShipDirection
-
-
+    setWrapperShipDirection: WraperShips.reducers.setWrapperShipDirection,
+    pushInDataShip: WraperShips.reducers.pushInDataShip,
+    setWraperShipsWidth: WraperShips.reducers.setWraperShipsWidth,
+    setWraperShipsHeight: WraperShips.reducers.setWraperShipsHeight,
 }
 
 const Slice = createSlice({
@@ -47,7 +48,10 @@ export const {
     moveWrapperShipRight,
     moveWrapperShipLeft,
     moveWrapperShipBottom,
-    setWrapperShipDirection
+    setWrapperShipDirection,
+    pushInDataShip,
+    setWraperShipsWidth,
+    setWraperShipsHeight,
 
 } = Slice.actions;
 

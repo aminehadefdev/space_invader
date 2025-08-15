@@ -7,37 +7,47 @@ const WraperShips = {
         direction: "",
         speed: 1,
         diposition: [
+            ["A", "A", "", "A", "A", "A",],
             ["A", "A", "A", "A", "A", "A",],
-            ["A", "A", "A", "A", "A", "A",],
-            ["A", "A", "A", "A", "A", "A",],
+            ["A", "A", "A", "", "A", "A",],
         ],
-        counter:0
+        dataShip: [],
+        counter: 0
     },
 
     reducers: {
-        moveWrapperShipRight: (state) => {  
-            if(state.WraperShips.y < state.Area.width - state.WraperShips.width){
+        setWraperShipsWidth: (state, action) => {
+            state.WraperShips.width = action.payload.width
+        },
+        setWraperShipsHeight: (state, action) => {
+            state.WraperShips.height = action.payload.height
+        },
+        pushInDataShip: (state, action) => {
+            state.WraperShips.dataShip.push(action.payload.data);
+        },
+        moveWrapperShipRight: (state) => {
+            if (state.WraperShips.y < state.Area.width - state.WraperShips.width) {
                 state.WraperShips.y = state.WraperShips.y + state.WraperShips.speed
-            }else{
-                state.WraperShips.counter = state.WraperShips.counter + 30 
+            } else {
+                state.WraperShips.counter = state.WraperShips.counter + 30
                 state.WraperShips.direction = "bottom"
             }
         },
         moveWrapperShipLeft: (state) => {
-            if(state.WraperShips.y >= 0){
+            if (state.WraperShips.y >= 0) {
                 state.WraperShips.y = state.WraperShips.y - state.WraperShips.speed
-            }else{
-                state.WraperShips.counter = state.WraperShips.counter + 30 
+            } else {
+                state.WraperShips.counter = state.WraperShips.counter + 30
                 state.WraperShips.direction = "bottom"
             }
         },
         moveWrapperShipBottom: (state) => {
             if (state.WraperShips.x <= state.WraperShips.counter) {
                 state.WraperShips.x = state.WraperShips.x + state.WraperShips.speed
-            }else{
-                if(state.WraperShips.y <= 0){
+            } else {
+                if (state.WraperShips.y <= 0) {
                     state.WraperShips.direction = 'right'
-                }else{
+                } else {
                     state.WraperShips.direction = 'left'
                 }
             }
