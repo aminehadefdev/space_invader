@@ -1,10 +1,10 @@
 import { useSelector } from 'react-redux'
 import Canon from './Canon/Canon'
-
 import useEventsKey from '../hooks/Canon/useEventsKey'
 import useDirection from '../hooks/Canon/useDirection'
 
 import "./App.css"
+import WraperShips from './WraperShips/WraperShips'
 
 function App() {
   const store = useSelector(state => state.App)
@@ -17,6 +17,7 @@ function App() {
   }
   return (
     <div style={style} className="App">
+      <WraperShips />
       <Canon />
     </div>
   );
