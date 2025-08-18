@@ -1,4 +1,4 @@
-import { pushInDataShip } from '../../stors/slice';
+import { pushInDataShip, copyDataSHip } from '../../stors/slice';
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from "react";
 
@@ -23,6 +23,7 @@ function useDataShip() {
             posY = 0
             posX = posX + 80
         })
+        dispatch(copyDataSHip())
 
     }, [])
 }

@@ -12,10 +12,16 @@ const WraperShips = {
             ["A", "A", "A", "", "A", "A",],
         ],
         dataShip: [],
-        counter: 0
+        counter: 0,
+        vertualData: {
+            vertualDataShip: []
+        }
     },
 
     reducers: {
+        copyDataSHip: (state) => {
+            state.WraperShips.vertualData.vertualDataShip = [...state.WraperShips.dataShip]
+        },
         setWraperShipsWidth: (state, action) => {
             state.WraperShips.width = action.payload.width
         },
@@ -32,6 +38,9 @@ const WraperShips = {
                 state.WraperShips.counter = state.WraperShips.counter + 30
                 state.WraperShips.direction = "bottom"
             }
+            state.WraperShips.vertualData.vertualDataShip.map((item) => {
+                item.y = item.y + state.WraperShips.speed
+            })
         },
         moveWrapperShipLeft: (state) => {
             if (state.WraperShips.y >= 0) {
@@ -40,6 +49,9 @@ const WraperShips = {
                 state.WraperShips.counter = state.WraperShips.counter + 30
                 state.WraperShips.direction = "bottom"
             }
+            state.WraperShips.vertualData.vertualDataShip.map((item) => {
+                item.y = item.y - state.WraperShips.speed
+            })
         },
         moveWrapperShipBottom: (state) => {
             if (state.WraperShips.x <= state.WraperShips.counter) {
@@ -51,6 +63,9 @@ const WraperShips = {
                     state.WraperShips.direction = 'left'
                 }
             }
+            state.WraperShips.vertualData.vertualDataShip.map((item) => {
+                item.x = item.x + state.WraperShips.speed
+            })
         },
         setWrapperShipDirection: (state, action) => {
             state.WraperShips.direction = action.payload.direction

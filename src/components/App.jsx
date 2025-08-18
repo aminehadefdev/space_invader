@@ -15,6 +15,8 @@ function App() {
   useDirection()
   useMoveWrapper()
 
+  console.log(store.WraperShips.vertualData.vertualDataShip[0])
+  
   const style = {
     width: store.Area.width,
     height: store.Area.height

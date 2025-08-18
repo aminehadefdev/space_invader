@@ -15,11 +15,6 @@ const reducers = {
     moveCanonRight: Canon.reducers.moveCanonRight,
     moveCanonLeft: Canon.reducers.moveCanonLeft,
 
-    moveShipRight: Ship.reducers.moveShipRight,
-    moveShipLeft: Ship.reducers.moveShipLeft,
-    moveShipBottom: Ship.reducers.moveShipBottom,
-    setShipDirection: Ship.reducers.setShipDirection,
-
     moveWrapperShipRight: WraperShips.reducers.moveWrapperShipRight,
     moveWrapperShipLeft: WraperShips.reducers.moveWrapperShipLeft,
     moveWrapperShipBottom: WraperShips.reducers.moveWrapperShipBottom,
@@ -27,6 +22,7 @@ const reducers = {
     pushInDataShip: WraperShips.reducers.pushInDataShip,
     setWraperShipsWidth: WraperShips.reducers.setWraperShipsWidth,
     setWraperShipsHeight: WraperShips.reducers.setWraperShipsHeight,
+    copyDataSHip: WraperShips.reducers.copyDataSHip,
 }
 
 const Slice = createSlice({
@@ -40,11 +36,6 @@ export const {
     moveCanonRight,
     moveCanonLeft,
 
-    moveShipBottom,
-    moveShipLeft,
-    moveShipRight,
-    setShipDirection,
-
     moveWrapperShipRight,
     moveWrapperShipLeft,
     moveWrapperShipBottom,
@@ -52,6 +43,7 @@ export const {
     pushInDataShip,
     setWraperShipsWidth,
     setWraperShipsHeight,
+    copyDataSHip,
 
 } = Slice.actions;
 
