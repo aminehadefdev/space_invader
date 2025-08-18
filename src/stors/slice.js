@@ -23,6 +23,7 @@ const reducers = {
     setWraperShipsWidth: WraperShips.reducers.setWraperShipsWidth,
     setWraperShipsHeight: WraperShips.reducers.setWraperShipsHeight,
     copyDataSHip: WraperShips.reducers.copyDataSHip,
+    setGameOver: WraperShips.reducers.setGameOver,
 }
 
 const Slice = createSlice({
@@ -44,6 +45,7 @@ export const {
     setWraperShipsWidth,
     setWraperShipsHeight,
     copyDataSHip,
+    setGameOver,
 
 } = Slice.actions;
 

@@ -22,7 +22,7 @@ function useMoveWrapper(){
             }
             animationFrame = requestAnimationFrame(move);
         }
-        if (store.WraperShips.direction) {
+        if (store.WraperShips.direction && store.WraperShips.gameover === false) {
             animationFrame = requestAnimationFrame(move);
         }
 

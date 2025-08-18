@@ -7,6 +7,7 @@ import useMoveWrapper from "../hooks/WraperShips/useMoveWrapper"
 import "./App.css"
 import WraperShips from './WraperShips/WraperShips'
 import useDataShip from '../hooks/Ship/useDataShip'
+import useGameOver from '../stors/gameOver/useGameOver'
 
 function App() {
   const store = useSelector(state => state.App)
@@ -14,6 +15,7 @@ function App() {
   useEventsKey()
   useDirection()
   useMoveWrapper()
+  useGameOver()
   
   const style = {
     width: store.Area.width,

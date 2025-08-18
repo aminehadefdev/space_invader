@@ -4,7 +4,7 @@ const WraperShips = {
         height: 200,
         x: 0,
         y: 0,
-        direction: "",
+        direction: "right",
         speed: 1,
         diposition: [
             ["A", "A", "", "A", "A", "A",],
@@ -13,12 +13,16 @@ const WraperShips = {
         ],
         dataShip: [],
         counter: 0,
+        gameover: false,
         vertualData: {
             vertualDataShip: []
         }
     },
 
     reducers: {
+        setGameOver: (state) => {
+            state.WraperShips.gameover = true
+        },
         copyDataSHip: (state) => {
             state.WraperShips.vertualData.vertualDataShip = [...state.WraperShips.dataShip]
         },
