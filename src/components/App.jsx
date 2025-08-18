@@ -14,8 +14,6 @@ function App() {
   useEventsKey()
   useDirection()
   useMoveWrapper()
-
-  console.log(store.WraperShips.vertualData.vertualDataShip[0])
   
   const style = {
     width: store.Area.width,
