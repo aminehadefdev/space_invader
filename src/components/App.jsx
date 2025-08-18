@@ -7,7 +7,7 @@ import useMoveWrapper from "../hooks/WraperShips/useMoveWrapper"
 import "./App.css"
 import WraperShips from './WraperShips/WraperShips'
 import useDataShip from '../hooks/Ship/useDataShip'
-import useGameOver from '../stors/gameOver/useGameOver'
+import useGameOver from '../hooks/GameOver/useGameOver'
 
 function App() {
   const store = useSelector(state => state.App)
