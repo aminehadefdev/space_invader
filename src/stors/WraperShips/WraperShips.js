@@ -20,9 +20,6 @@ const WraperShips = {
     },
 
     reducers: {
-        setGameOver: (state) => {
-            state.WraperShips.gameover = true
-        },
         copyDataSHip: (state) => {
             state.WraperShips.vertualData.vertualDataShip = [...state.WraperShips.dataShip]
         },

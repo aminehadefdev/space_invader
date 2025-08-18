@@ -3,6 +3,7 @@ import Area from "./Area/Area";
 import Canon from './Canon/Canon';
 import Ship from './Ship/Ship';
 import WraperShips from "./WraperShips/WraperShips"
+import Gameover from "./Gameover/Gameover"
 
 const initialState = {
     Area: Area.initialState,
@@ -23,7 +24,9 @@ const reducers = {
     setWraperShipsWidth: WraperShips.reducers.setWraperShipsWidth,
     setWraperShipsHeight: WraperShips.reducers.setWraperShipsHeight,
     copyDataSHip: WraperShips.reducers.copyDataSHip,
-    setGameOver: WraperShips.reducers.setGameOver,
+
+
+    setGameOver: Gameover.reducers.setGameOver,
 }
 
 const Slice = createSlice({
@@ -45,6 +48,7 @@ export const {
     setWraperShipsWidth,
     setWraperShipsHeight,
     copyDataSHip,
+    
     setGameOver,
 
 } = Slice.actions;
