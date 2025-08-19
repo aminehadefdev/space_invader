@@ -4,13 +4,15 @@ import Canon from './Canon/Canon';
 import Ship from './Ship/Ship';
 import WraperShips from "./WraperShips/WraperShips"
 import Gameover from "./Gameover/Gameover"
+import Missile from './Missile/Missile';
 
 const initialState = {
     Area: Area.initialState,
     Canon: Canon.initialState,
     Ship: Ship.initialState,
     WraperShips: WraperShips.initialState,
-    Gameover: Gameover.initialState
+    Gameover: Gameover.initialState,
+    Missile: Missile.initialState
 };
 const reducers = {
     setDirection: Canon.reducers.setDirection,
@@ -28,6 +30,8 @@ const reducers = {
     copyDataSHip: Ship.reducers.copyDataSHip,
 
     setGameOver: Gameover.reducers.setGameOver,
+
+    
 }
 
 const Slice = createSlice({
