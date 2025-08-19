@@ -4,7 +4,11 @@ import { useDispatch } from 'react-redux';
 import { setDirection } from '../../stors/slice';
 
 
-
+/**
+ * Ce hook sert à écouter les événements des flèches directionnelles
+ * bug:
+ *    Quand je reste apuyer longtemps sur la droite ou la gauche et que je change brusquement de direction, une latence se crée.
+ **/
 function useEventsKey() {
     const dispatch = useDispatch()
     const handleKeyUp = () => {

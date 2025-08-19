@@ -2,13 +2,16 @@ import { pushInDataShip, copyDataSHip } from '../../stors/slice';
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from "react";
 
+/**
+ * Ce hook s'occupe de calculer les positions des vaisseaux
+ */
 function useDataShip() {
     const dispatch = useDispatch()
-    const store = useSelector(state => state.App)
+    const wraperShips = useSelector(state => state.App.WraperShips)
     useEffect(() => {
         var posX = 0;
         var posY = 0;
-        store.WraperShips.diposition.map((item) => {
+        wraperShips.diposition.map((item) => {
             item.map((it) => {
                 if (it === "A") {
                     dispatch(pushInDataShip({

@@ -4,10 +4,11 @@ import useEventsKey from '../hooks/Canon/useEventsKey'
 import useDirection from '../hooks/Canon/useDirection'
 import useMoveWrapper from "../hooks/WraperShips/useMoveWrapper"
 
-import "./App.css"
 import WraperShips from './WraperShips/WraperShips'
 import useDataShip from '../hooks/Ship/useDataShip'
 import useGameOver from '../hooks/GameOver/useGameOver'
+
+import "./App.css"
 
 function App() {
   const store = useSelector(state => state.App)

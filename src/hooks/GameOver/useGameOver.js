@@ -2,6 +2,10 @@ import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { setGameOver } from "../../stors/slice"
 
+
+/**
+ * 
+ */
 function useGameOver(){
     const store = useSelector(state => state.App)
     const dispatch = useDispatch()

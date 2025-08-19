@@ -11,35 +11,25 @@ const WraperShips = {
             ["A", "A", "A", "A", "A", "A",],
             ["A", "A", "A", "", "A", "A",],
         ],
-        dataShip: [],
         counter: 0,
-        gameover: false,
-        vertualData: {
-            vertualDataShip: []
-        }
     },
 
     reducers: {
-        copyDataSHip: (state) => {
-            state.WraperShips.vertualData.vertualDataShip = [...state.WraperShips.dataShip]
-        },
         setWraperShipsWidth: (state, action) => {
             state.WraperShips.width = action.payload.width
         },
         setWraperShipsHeight: (state, action) => {
             state.WraperShips.height = action.payload.height
         },
-        pushInDataShip: (state, action) => {
-            state.WraperShips.dataShip.push(action.payload.data);
-        },
         moveWrapperShipRight: (state) => {
+            
             if (state.WraperShips.y < state.Area.width - state.WraperShips.width) {
                 state.WraperShips.y = state.WraperShips.y + state.WraperShips.speed
             } else {
                 state.WraperShips.counter = state.WraperShips.counter + 30
                 state.WraperShips.direction = "bottom"
             }
-            state.WraperShips.vertualData.vertualDataShip.map((item) => {
+            state.Ship.vertualDataShip.map((item) => {
                 item.y = item.y + state.WraperShips.speed
             })
         },
@@ -50,7 +40,7 @@ const WraperShips = {
                 state.WraperShips.counter = state.WraperShips.counter + 30
                 state.WraperShips.direction = "bottom"
             }
-            state.WraperShips.vertualData.vertualDataShip.map((item) => {
+            state.Ship.vertualDataShip.map((item) => {
                 item.y = item.y - state.WraperShips.speed
             })
         },
@@ -64,7 +54,7 @@ const WraperShips = {
                     state.WraperShips.direction = 'left'
                 }
             }
-            state.WraperShips.vertualData.vertualDataShip.map((item) => {
+            state.Ship.vertualDataShip.map((item) => {
                 item.x = item.x + state.WraperShips.speed
             })
         },

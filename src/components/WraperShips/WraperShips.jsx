@@ -9,8 +9,8 @@ import { useEffect } from "react";
 
 function WraperShips() {
     const wraperShips = useSelector(state => state.App.WraperShips)
-    const dispatch = useDispatch()
     const ship = useSelector(state => state.App.Ship)
+    const dispatch = useDispatch()
 
     useEffect(() => {
         dispatch(setWraperShipsWidth({ width: (wraperShips.diposition[0].length * ship.width + (wraperShips.diposition[0].length - 1) * 30) }))
@@ -26,7 +26,7 @@ function WraperShips() {
     return (
         <div style={style} className='wraperShips'>
             {
-                wraperShips.dataShip.map((item, index) => <Ship key={index} x={item.x} y={item.y} />)
+                ship.dataShip.map((item, index) => <Ship key={index} x={item.x} y={item.y} />)
             }
         </div>
     )

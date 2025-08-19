@@ -9,7 +9,8 @@ const initialState = {
     Area: Area.initialState,
     Canon: Canon.initialState,
     Ship: Ship.initialState,
-    WraperShips: WraperShips.initialState
+    WraperShips: WraperShips.initialState,
+    Gameover: Gameover.initialState
 };
 const reducers = {
     setDirection: Canon.reducers.setDirection,
@@ -20,11 +21,11 @@ const reducers = {
     moveWrapperShipLeft: WraperShips.reducers.moveWrapperShipLeft,
     moveWrapperShipBottom: WraperShips.reducers.moveWrapperShipBottom,
     setWrapperShipDirection: WraperShips.reducers.setWrapperShipDirection,
-    pushInDataShip: WraperShips.reducers.pushInDataShip,
     setWraperShipsWidth: WraperShips.reducers.setWraperShipsWidth,
     setWraperShipsHeight: WraperShips.reducers.setWraperShipsHeight,
-    copyDataSHip: WraperShips.reducers.copyDataSHip,
 
+    pushInDataShip: Ship.reducers.pushInDataShip,
+    copyDataSHip: Ship.reducers.copyDataSHip,
 
     setGameOver: Gameover.reducers.setGameOver,
 }
@@ -44,11 +45,12 @@ export const {
     moveWrapperShipLeft,
     moveWrapperShipBottom,
     setWrapperShipDirection,
-    pushInDataShip,
     setWraperShipsWidth,
     setWraperShipsHeight,
-    copyDataSHip,
     
+    copyDataSHip,
+    pushInDataShip,
+
     setGameOver,
 
 } = Slice.actions;

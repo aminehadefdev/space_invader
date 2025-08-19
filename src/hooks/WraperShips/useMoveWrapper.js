@@ -3,6 +3,9 @@ import { useEffect } from "react"
 import { moveWrapperShipRight, moveWrapperShipLeft, moveWrapperShipBottom } from '../../stors/slice';
 
 
+/**
+ * Ce hook sert a l'animation du wrapper des vaisseaux
+ */
 function useMoveWrapper(){
     const store = useSelector(state => state.App)
     const dispatch = useDispatch()
@@ -22,11 +25,12 @@ function useMoveWrapper(){
             }
             animationFrame = requestAnimationFrame(move);
         }
-        if (store.WraperShips.direction && store.WraperShips.gameover === false) {
+        if (store.WraperShips.direction && store.Gameover.gameover === false) {
             animationFrame = requestAnimationFrame(move);
         }
-
-        return () => cancelAnimationFrame(animationFrame);
+        return () => {
+            cancelAnimationFrame(animationFrame)
+        }
     }, [store.WraperShips.direction, dispatch])
 }
 

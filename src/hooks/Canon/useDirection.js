@@ -3,7 +3,9 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { moveCanonRight, moveCanonLeft } from "../../stors/slice";
 
-
+/**
+ * ce hook sert à l'animation du canon
+ */
 function useDirection() {
     const store = useSelector(state => state.App)
     const dispatch = useDispatch()
