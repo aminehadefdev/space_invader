@@ -15,6 +15,7 @@ function App() {
   useDataShip()
   useEventsKey()
   useDirection()
+  
   useMoveWrapper()
   useGameOver()
   
