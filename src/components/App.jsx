@@ -1,12 +1,13 @@
 import { useSelector } from 'react-redux'
-import Canon from './Canon/Canon'
+
 import useEventsKey from '../hooks/Canon/useEventsKey'
 import useDirection from '../hooks/Canon/useDirection'
 import useMoveWrapper from "../hooks/WraperShips/useMoveWrapper"
-
-import WraperShips from './WraperShips/WraperShips'
 import useDataShip from '../hooks/Ship/useDataShip'
 import useGameOver from '../hooks/GameOver/useGameOver'
+
+import Canon from './Canon/Canon'
+import WraperShips from './WraperShips/WraperShips'
 
 import "./App.css"
 
@@ -15,7 +16,6 @@ function App() {
   useDataShip()
   useEventsKey()
   useDirection()
-  
   useMoveWrapper()
   useGameOver()
   
