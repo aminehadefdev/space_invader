@@ -14,7 +14,10 @@ const Missile = {
             })
         },
         moveUp: (state)=>{
-            state.Missile.missiles.map((item)=>{
+            state.Missile.missiles.map((item, index)=>{
+                if(item.x > state.Area.height){
+                    state.Missile.missiles.splice(index, 1)
+                }
                 item.x = item.x + state.Missile.speed
             })
         },
