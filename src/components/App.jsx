@@ -5,6 +5,7 @@ import useDirection from '../hooks/Canon/useDirection'
 import useMoveWrapper from "../hooks/WraperShips/useMoveWrapper"
 import useDataShip from '../hooks/Ship/useDataShip'
 import useGameOver from '../hooks/GameOver/useGameOver'
+import useMoveMissile from '../hooks/Missile/useMoveMissile'
 
 import Canon from './Canon/Canon'
 import WraperShips from './WraperShips/WraperShips'
@@ -19,6 +20,7 @@ function App() {
   useDirection()
   useMoveWrapper()
   useGameOver()
+  useMoveMissile()
   
   const style = {
     width: store.Area.width,
@@ -29,9 +31,9 @@ function App() {
       <WraperShips />
       <Canon />
       {
-        store.Missile.missiles.map((item)=>{
+        store.Missile.missiles.map((item, index)=>{
           return (
-            <Missile x={item.x} y={item.y} />
+            <Missile key={index} x={item.x} y={item.y} />
           )
         })
       }

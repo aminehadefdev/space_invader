@@ -31,9 +31,8 @@ const reducers = {
 
     setGameOver: Gameover.reducers.setGameOver,
 
-    pushInMissile: Missile.reducers.pushInMissile
-
-    
+    pushInMissile: Missile.reducers.pushInMissile,
+    moveUp: Missile.reducers.moveUp,
 }
 
 const Slice = createSlice({
@@ -59,8 +58,8 @@ export const {
 
     setGameOver,
 
-    pushInMissile
-
+    pushInMissile,
+    moveUp,
 } = Slice.actions;
 
 export default Slice.reducer;
