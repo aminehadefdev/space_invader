@@ -31,6 +31,8 @@ const reducers = {
 
     setGameOver: Gameover.reducers.setGameOver,
 
+    pushInMissile: Missile.reducers.pushInMissile
+
     
 }
 
@@ -56,6 +58,8 @@ export const {
     pushInDataShip,
 
     setGameOver,
+
+    pushInMissile
 
 } = Slice.actions;
 

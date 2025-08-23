@@ -8,6 +8,7 @@ import useGameOver from '../hooks/GameOver/useGameOver'
 
 import Canon from './Canon/Canon'
 import WraperShips from './WraperShips/WraperShips'
+import Missile from "./Missile/Missile"
 
 import "./App.css"
 
@@ -27,6 +28,13 @@ function App() {
     <div style={style} className="App">
       <WraperShips />
       <Canon />
+      {
+        store.Missile.missiles.map((item)=>{
+          return (
+            <Missile x={item.x} y={item.y} />
+          )
+        })
+      }
     </div>
   );
 }

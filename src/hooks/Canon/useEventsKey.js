@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { setDirection } from '../../stors/slice';
+import { setDirection, pushInMissile } from '../../stors/slice';
 
 
 /**
@@ -14,7 +14,7 @@ function useEventsKey() {
     const handleKeyUp = () => {
         dispatch(setDirection({ direction: null }));
     }
-    const handleKeyDown = (e) => {
+    const handleKeyDown = (e) => {        
         switch (e.key) {
             case 'ArrowRight':
                 dispatch(setDirection({ direction: "right" }));
@@ -22,6 +22,9 @@ function useEventsKey() {
 
             case 'ArrowLeft':
                 dispatch(setDirection({ direction: "left" }));
+                break
+            case "ArrowUp":
+                dispatch(pushInMissile())
                 break
         }
     }

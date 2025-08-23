@@ -4,7 +4,7 @@ const WraperShips = {
         height: 200,
         x: 0,
         y: 0,
-        direction: "right",
+        direction: "",
         speed: 1,
         diposition: [
             ["A", "A", "", "A", "A", "A",],
