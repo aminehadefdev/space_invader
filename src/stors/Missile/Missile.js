@@ -18,6 +18,7 @@ const Missile = {
                 if(item.x > state.Area.height){
                     state.Missile.missiles.splice(index, 1)
                 }
+                
                 item.x = item.x + state.Missile.speed
             })
         },
