@@ -27,7 +27,6 @@ const reducers = {
     setWraperShipsHeight: WraperShips.reducers.setWraperShipsHeight,
 
     pushInDataShip: Ship.reducers.pushInDataShip,
-    copyDataSHip: Ship.reducers.copyDataSHip,
 
     setGameOver: Gameover.reducers.setGameOver,
 
@@ -53,7 +52,6 @@ export const {
     setWraperShipsWidth,
     setWraperShipsHeight,
     
-    copyDataSHip,
     pushInDataShip,
 
     setGameOver,
